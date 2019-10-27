@@ -23,6 +23,11 @@ import { environment } from '../environments/environment';
 
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
+import { TopHeadlinesComponent } from './components/top-headlines/top-headlines.component';
+
+// Http service
+
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +37,8 @@ import { AuthService } from "./shared/services/auth.service";
     SignUpComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    TopHeadlinesComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,8 @@ import { AuthService } from "./shared/services/auth.service";
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
